@@ -30,7 +30,8 @@ args = argparse.Namespace(alpha=0.95,
                           )
 
 tokenizer = BertTokenizer.from_pretrained("bert-base-uncased", do_lower_case=True)
-model = BertAbs.from_pretrained("bertabs-finetuned-cnndm")
+#model = BertAbs.from_pretrained("bertabs-finetuned-cnndm")
+model = BertAbs.from_pretrained("remi/bertabs-finetuned-cnndm-extractive-abstractive-summarization")
 model.to(args.device)
 model.eval()
 
